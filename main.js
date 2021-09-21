@@ -1,5 +1,5 @@
 // SELECTORS
-
+//const nameInput = document.querySelector(".name-input");
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
@@ -8,12 +8,19 @@ const filterOption = document.querySelector(".filter-todo");
 // EVENT LISTENERS
 
 document.addEventListener("DOMContentLoaded", getTodos);
+//nameButton.addEventListener("click", addName);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 //TO MAKE THE FILTER OPTION WORK WITH CHROME I HAD TO CHANGE THE "CLICK" TO "CHANGE" FOR THAT FUNCTION.
 
 // FUNCTIONS
+
+/*//CREATE NAME:
+const newName = document.createElement("h3");
+newName.innerText = nameInput.value;
+newName.classList.add("todo-name");
+todoDiv.appendChild(newName);*/
 
 function addTodo(event) {
   //PREVENT FORM FROM SUBMITTING:
@@ -28,7 +35,7 @@ function addTodo(event) {
   todoDiv.appendChild(newTodo);
   //ADD TODO TO LOCAL STORAGE:
   saveLocalTodos(todoInput.value);
-  //CHECK MARK BUTTON:
+  //CHECK COMPLETED BUTTON:
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add("complete-btn");
@@ -50,7 +57,7 @@ function deleteCheck(e) {
   //DELETE TODO:
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentElement;
-    //ANIMATION:
+    //DELETE ANIMATION:
     todo.classList.add("fall");
     removeLocalTodos(todo);
     todo.addEventListener("transitionend", function () {
@@ -146,3 +153,18 @@ function removeLocalTodos(todo) {
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+//POP-UP GREETING ON SITE:
+let myGreeting = setTimeout(function () {
+  alert("Enjoying the To Do list? Please give me a pass then! :)");
+}, 3000);
+
+//CLOCK FUNCTION:
+function displayTime() {
+  let date = new Date();
+  let time = date.toLocaleTimeString();
+  document.querySelector(".clock").textContent = time;
+}
+
+displayTime();
+const createClock = setInterval(displayTime, 1000);

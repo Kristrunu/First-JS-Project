@@ -12,6 +12,11 @@ body {
   min-height: 100vh;
 }
 
+/* CLOCK STYLE */
+.clock {
+  padding: 1rem;
+}
+
 /* --- HEADER STYLE --- */
 header {
   font-size: 1.5rem;
@@ -23,6 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 header,
@@ -34,9 +40,21 @@ form {
 }
 
 /* --- FORM STYLE --- */
-form input {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+/*.list-name-text {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-bottom-left-radius: .3rem;
+  border-top-left-radius: .3rem;
+  background-color: #3f87a6;
+}
+
+.list-name-form {
+  padding: 1rem;
+}*/
+
+.todo-input {
+  border-bottom-left-radius: .3rem;
+  border-top-left-radius: .3rem;
 }
 
 form input,

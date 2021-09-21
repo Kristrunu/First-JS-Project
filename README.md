@@ -8,3 +8,5 @@ You can also filter the list so you will only see completed or uncompleted tasks
 <li>JavaScript to make the list</li>
 <li>CSS to style</li>
 <li>Font Awesome for icons</li>
+
+<p>Please see the codes for comments and explanations</p>

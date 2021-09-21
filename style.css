@@ -6,7 +6,7 @@
 
 /* --- BODY STYLE --- */
 body {
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(0.25turn, #65a4bf, #becdb4, #d58e42);
   color: white;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
@@ -16,6 +16,15 @@ body {
 header {
   font-size: 1.5rem;
 }
+
+.subtext {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 header,
 form {
   min-height: 20vh;
@@ -25,9 +34,14 @@ form {
 }
 
 /* --- FORM STYLE --- */
+form input {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
 form input,
 form button {
-  padding: 0.5rem;
+  padding: 1rem;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   border: none;
@@ -40,6 +54,8 @@ form button {
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 form button:hover {
   background: #3f87a6;
@@ -67,6 +83,7 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease;
+  border-radius: 0.3rem;
 }
 
 .todo li {
@@ -96,6 +113,8 @@ form button:hover {
 
 .trash-btn {
   background: #9ccade;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 .trash-btn:hover {
   background: #3f87a6;
@@ -116,6 +135,7 @@ form button:hover {
   opacity: 0;
 }
 
+/* --- DROP DOWN MENU STYLE --- */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -130,6 +150,7 @@ select {
 
 .select {
   margin: 1rem;
+  border-radius: 0.3rem;
   position: relative;
   overflow: hidden;
 }

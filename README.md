@@ -8,5 +8,8 @@ You can also filter the list so you will only see completed or uncompleted tasks
 <li>JavaScript to make the list</li>
 <li>CSS to style</li>
 <li>Font Awesome for icons</li>
+<li>setTimeout to display a pop up message after 3 seconds</li>
+<li>setInterval to display a clock in the top/left corner</li>
+<li>JS and CSS to make the animation when you check the completed button and delete a list item</li>
 <br>
 <p>Please see the code for comments and explanations</p>

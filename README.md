@@ -9,4 +9,4 @@ You can also filter the list so you will only see completed or uncompleted tasks
 <li>CSS to style</li>
 <li>Font Awesome for icons</li>
 <br>
-<p>Please see the codes for comments and explanations</p>
+<p>Please see the code for comments and explanations</p>

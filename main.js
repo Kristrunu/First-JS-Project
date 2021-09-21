@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
+//TO MAKE THE FILTER OPTION WORK WITH CHROME I HAD TO CHANGE THE "CLICK" TO "CHANGE" FOR THAT FUNCTION.
 
 // FUNCTIONS
 
 function addTodo(event) {
-  //PREVENT FORM FROM SUBMITTING
+  //PREVENT FORM FROM SUBMITTING:
   event.preventDefault();
   //TODO DIV:
   const todoDiv = document.createElement("div");

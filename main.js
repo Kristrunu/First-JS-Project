@@ -1,5 +1,4 @@
 // SELECTORS
-//const nameInput = document.querySelector(".name-input");
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
@@ -8,19 +7,12 @@ const filterOption = document.querySelector(".filter-todo");
 // EVENT LISTENERS
 
 document.addEventListener("DOMContentLoaded", getTodos);
-//nameButton.addEventListener("click", addName);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 //TO MAKE THE FILTER OPTION WORK WITH CHROME I HAD TO CHANGE THE "CLICK" TO "CHANGE" FOR THAT FUNCTION.
 
 // FUNCTIONS
-
-/*//CREATE NAME:
-const newName = document.createElement("h3");
-newName.innerText = nameInput.value;
-newName.classList.add("todo-name");
-todoDiv.appendChild(newName);*/
 
 function addTodo(event) {
   //PREVENT FORM FROM SUBMITTING:

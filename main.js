@@ -1,12 +1,15 @@
 // SELECTORS
+const nameInput = document.querySelector(".name-input");
+const nameButton = document.querySelector(".name-button");
+const title = document.querySelector(".title");
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 // EVENT LISTENERS
-
 document.addEventListener("DOMContentLoaded", getTodos);
+nameButton.addEventListener("click", addName);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
@@ -14,6 +17,14 @@ filterOption.addEventListener("change", filterTodo);
 
 // FUNCTIONS
 
+//FUNCTIONS FOR THE LIST NAME INPUT:
+function addName(event) {
+  //PREVENT FORM FROM SUBMITTING:
+  event.preventDefault();
+  //CREATE NAME FOR LIST:
+  title.innerHTML = nameInput.value;
+}
+//FUNCTIONS FOR THE TODO LIST:
 function addTodo(event) {
   //PREVENT FORM FROM SUBMITTING:
   event.preventDefault();
